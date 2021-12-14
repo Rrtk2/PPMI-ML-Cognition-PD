@@ -16,7 +16,7 @@ Machine Learning-based Prediction of Cognitive Outcomes in de novo Parkinson's D
 **Conclusion:** Within the generated models, clinical predictors appear to play a more prominent role than biological or genetic predictors. ML algorithms can accurately predict cognitive impairment and dementia in de-novo PD up to eight years before cognitive decline.
 
 ## How is data processed and analyzed?
-TBA.
+To be added.
 
 ## Contact
 Ehsan Pishva ([ehsanpishva](https://github.com/ehsanpishva)) - e.pishva@maastrichtuniversity.nl 

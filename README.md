@@ -22,18 +22,19 @@ To be added.
 Ehsan Pishva ([ehsanpishva](https://github.com/ehsanpishva)) - e.pishva@maastrichtuniversity.nl 
 
 ## Who is involved, and what are their roles.
-Joshua Harvey ([JoshHarveyGit](https://github.com/JoshHarveyGit)) - Undertook data analysis, support with data review, wrote the first draft of the manuscript
+Joshua Harvey ([JoshHarveyGit](https://github.com/JoshHarveyGit)) - Undertook data analysis, support with data review, wrote the first draft of the manuscript.
 
-Rick Reijnders ([Rrtk2](https://github.com/Rrtk2)) - Undertook data analysis, support with data review, wrote the first draft of the manuscript
+Rick A Reijnders ([Rrtk2](https://github.com/Rrtk2)) - Undertook data analysis, support with data review, wrote the first draft of the manuscript.
 
-Ehsan Pishva ([ehsanpishva](https://github.com/ehsanpishva)) - Conceived and directed the project, wrote the first draft of the manuscript
+Ehsan Pishva ([ehsanpishva](https://github.com/ehsanpishva)) - Conceived and directed the project, wrote the first draft of the manuscript.
 
-Annelien Duits, Byron Creese - Were involved in the selection of the clinical predictors and outcome
+Annelien Duits, Byron Creese - Were involved in the selection of the clinical predictors and outcome.
 Rachel Cavil, Sebastian Köhler, Ali Torkamani - Provided advice on data analysis.
-Gemma Shireby - Contributed to generating polygenic scores
+Gemma Shireby - Contributed to generating polygenic scores.
 
-Joshua Harvey, Rick Reijnders, Ehsan Pishva, Katie Lunnon, Albert FG Leentjens, Lars Eijssen, Bart PF Rutten, Byron Creese, Annelien Duits - Contributed to the interpretation of the results
-All authors provided critical feedback on the manuscript and approved the final submission
+Joshua Harvey, Rick A Reijnders, Ehsan Pishva, Katie Lunnon, Albert FG Leentjens, Lars Eijssen, Bart PF Rutten, Byron Creese, Annelien Duits - Contributed to the interpretation of the results. 
+
+All authors provided critical feedback on the manuscript and approved the final submission.
 
 
 ## Status of project

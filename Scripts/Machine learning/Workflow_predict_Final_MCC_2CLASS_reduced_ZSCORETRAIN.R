@@ -1339,4 +1339,4 @@ WorkflowPPMI = function(s_MLmethods,s_Outcome_type,s_feature_subset,FeatureInfo,
 #-----------------------------------------------------------------------------------------------------#
 #							More info
 #-----------------------------------------------------------------------------------------------------#
-# Part of the "Machine Learning-based Prediction of Cognitive Outcomes in de novo Parkinson's Disease" project. See https://github.com/Rrtk2/PPMI-ML-Cognition-PD/blob/main/README.md for licencing and more info.
+# Part of the "Machine Learning-based Prediction of Cognitive Outcomes in de novo Parkinson's Disease" project. See https://github.com/Rrtk2/PPMI-ML-Cognition-PD for licencing and more info.

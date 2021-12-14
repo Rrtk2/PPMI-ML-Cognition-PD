@@ -1,0 +1,189 @@
+library(png)
+library(grid)
+library(gridExtra)
+
+#plot1 <- readPNG('plot1.png')
+#plot2 <- readPNG('plot2.png')
+
+#grid.arrange(rasterGrob(plot1),rasterGrob(plot2),ncol=1)
+
+
+
+
+
+
+#1) load per class -> Subset -> ML algo the correct object. 
+#2) Rename object to current thing
+#3) Make 1 plot of all ML methods per Class -> subset; save plot
+#4) make and plot grid.
+
+#-----------------------------------------------------------------------------------------------------#
+#							Goal
+#-----------------------------------------------------------------------------------------------------#
+# this image will be the MAIN ROC plot image in the text
+
+#-----------------------------------------------------------------------------------------------------#
+#							Settings
+#-----------------------------------------------------------------------------------------------------#
+# Details about ROC curves
+	s_ROC_direction = "<"
+	s_ROC_Level  = "Class1"
+	
+	# make settings for AUC/MCC locations
+		s_AUC_x = 20#25
+		s_MCC_x = 0
+		s_Text_top = 30
+		s_Text_step = 6
+		
+		s_ThickMode = TRUE
+		s_LineThickLwd = ifelse(s_ThickMode,2,1) # thick line mode for best or not
+		s_BoldThickFont = ifelse(s_ThickMode,"bold","plain")
+		
+#-----------------------------------------------------------------------------------------------------#
+#							Library
+#-----------------------------------------------------------------------------------------------------#
+library(pROC)
+library(ggplot2)
+library(cowplot)
+library(grid)
+library(gridExtra)
+
+#-----------------------------------------------------------------------------------------------------#
+#							1 load + 2 Rename
+#-----------------------------------------------------------------------------------------------------#
+ROC_Rootdir = "C:/DATA STORAGE/Projects/PPMI/Results"
+
+i_class=0;temp_Outcome = "Impairment";o_subset="All";p_algo="rf"
+plotlist = list()
+# Class
+for( i_class in c(0,1)){ 
+	# 0 = Impairment outcome, 1 = PDD outcome, 2 = MCIvsPDD
+	if(i_class==0){temp_Outcome = "Impairment"}
+	if(i_class==1){temp_Outcome = "PDD"}
+	if(i_class==2){temp_Outcome = "MCIvsPDD"}
+	if(i_class==3){temp_Outcome = "Subjective_complaint"}
+	
+	
+	# Subset
+	for( o_subset in c("All","Clinical","Serum","Genetic_Epigenetic")){ #c("All","Clinical","Serum","Genetic_Epigenetic")
+
+		# Machine learning algorithm
+		for( p_algo in c("cforest","svmLinear","glmnet", "rf")){ # svmLinear/glmnet problems ; c("cforest","svmLinear","glmnet", "rf")
+			#browser()
+			# Show progress
+			print(paste0(ROC_Rootdir,"/",temp_Outcome,"/",o_subset,"/",p_algo))
+			
+			currentname = paste0(temp_Outcome,"_",o_subset,"_",p_algo)
+						
+			# old style
+			temp_png = readPNG(paste0("C:/DATA STORAGE/Projects/PPMI/Results/",temp_Outcome,"/",o_subset,"/Plots/",p_algo,"_RFE_plot.png"),native = F)
+			
+			# assign data
+			plotlist[[currentname]] = temp_png
+			
+			# remove all
+			#rm(list = ls()[grep(ls(),pattern = "^ROC_",invert = T)])
+			gc()
+		}
+
+	}
+
+
+}
+
+
+
+png(paste0(ROC_Rootdir,"/RFE_grid_",format(Sys.time(), "%M%S_%d%m%y"),".png"),width = 4*1000,height = 8*1000, res = 350)
+	#par(oma=c(100,100,100,100))
+	grid.arrange(rasterGrob(plotlist$Impairment_All_cforest),
+	rasterGrob(plotlist$Impairment_All_svmLinear),
+	rasterGrob(plotlist$Impairment_All_glmnet),
+	rasterGrob(plotlist$Impairment_All_rf),
+	rasterGrob(plotlist$Impairment_Clinical_cforest),
+	rasterGrob(plotlist$Impairment_Clinical_svmLinear),
+	rasterGrob(plotlist$Impairment_Clinical_glmnet),
+	rasterGrob(plotlist$Impairment_Clinical_rf),
+	rasterGrob(plotlist$Impairment_Serum_cforest),
+	rasterGrob(plotlist$Impairment_Serum_svmLinear),
+	rasterGrob(plotlist$Impairment_Serum_glmnet),
+	rasterGrob(plotlist$Impairment_Serum_rf),
+	rasterGrob(plotlist$Impairment_Genetic_Epigenetic_cforest),
+	rasterGrob(plotlist$Impairment_Genetic_Epigenetic_svmLinear),
+	rasterGrob(plotlist$Impairment_Genetic_Epigenetic_glmnet),
+	rasterGrob(plotlist$Impairment_Genetic_Epigenetic_rf),
+	rasterGrob(plotlist$PDD_All_cforest),
+	rasterGrob(plotlist$PDD_All_svmLinear),
+	rasterGrob(plotlist$PDD_All_glmnet),
+	rasterGrob(plotlist$PDD_All_rf),
+	rasterGrob(plotlist$PDD_Clinical_cforest),
+	rasterGrob(plotlist$PDD_Clinical_svmLinear),
+	rasterGrob(plotlist$PDD_Clinical_glmnet),
+	rasterGrob(plotlist$PDD_Clinical_rf),
+	rasterGrob(plotlist$PDD_Serum_cforest),
+	rasterGrob(plotlist$PDD_Serum_svmLinear),
+	rasterGrob(plotlist$PDD_Serum_glmnet),
+	rasterGrob(plotlist$PDD_Serum_rf),
+	rasterGrob(plotlist$PDD_Genetic_Epigenetic_cforest),
+	rasterGrob(plotlist$PDD_Genetic_Epigenetic_svmLinear),
+	rasterGrob(plotlist$PDD_Genetic_Epigenetic_glmnet),
+	rasterGrob(plotlist$PDD_Genetic_Epigenetic_rf),ncol=4,nrow=8,
+	vp=viewport(width=0.8, height=0.95))
+	
+	# Methods
+	#grid.text("cforest", x = unit(0.05, "npc"), y = unit(.99, "npc"),gp = gpar(fontsize=20))
+	#grid.text("svmLinear", x = unit(0.25, "npc"), y = unit(.99, "npc"),gp = gpar(fontsize=20))
+	#grid.text("glmnet", x = unit(0.75, "npc"), y = unit(.99, "npc"),gp = gpar(fontsize=20))
+	#grid.text("rf", x = unit(0.95, "npc"), y = unit(.99, "npc"),gp = gpar(fontsize=20))
+	
+	for(i in (1:100)/100){
+	grid.text(i, x = unit(i, "npc"), y = unit(.99, "npc"),gp = gpar(fontsize=1))}
+	
+dev.off()
+
+
+pdf(paste0(ROC_Rootdir,"/RFE_grid_",format(Sys.time(), "%M%S_%d%m%y"),".pdf"), width = 4) 
+	grid.arrange(rasterGrob(plotlist$Impairment_All_cforest),
+	rasterGrob(plotlist$Impairment_All_svmLinear),
+	rasterGrob(plotlist$Impairment_All_glmnet),
+	rasterGrob(plotlist$Impairment_All_rf),
+	rasterGrob(plotlist$Impairment_Clinical_cforest),
+	rasterGrob(plotlist$Impairment_Clinical_svmLinear),
+	rasterGrob(plotlist$Impairment_Clinical_glmnet),
+	rasterGrob(plotlist$Impairment_Clinical_rf),
+	rasterGrob(plotlist$Impairment_Serum_cforest),
+	rasterGrob(plotlist$Impairment_Serum_svmLinear),
+	rasterGrob(plotlist$Impairment_Serum_glmnet),
+	rasterGrob(plotlist$Impairment_Serum_rf),
+	rasterGrob(plotlist$Impairment_Genetic_Epigenetic_cforest),
+	rasterGrob(plotlist$Impairment_Genetic_Epigenetic_svmLinear),
+	rasterGrob(plotlist$Impairment_Genetic_Epigenetic_glmnet),
+	rasterGrob(plotlist$Impairment_Genetic_Epigenetic_rf),
+	rasterGrob(plotlist$PDD_All_cforest),
+	rasterGrob(plotlist$PDD_All_svmLinear),
+	rasterGrob(plotlist$PDD_All_glmnet),
+	rasterGrob(plotlist$PDD_All_rf),
+	rasterGrob(plotlist$PDD_Clinical_cforest),
+	rasterGrob(plotlist$PDD_Clinical_svmLinear),
+	rasterGrob(plotlist$PDD_Clinical_glmnet),
+	rasterGrob(plotlist$PDD_Clinical_rf),
+	rasterGrob(plotlist$PDD_Serum_cforest),
+	rasterGrob(plotlist$PDD_Serum_svmLinear),
+	rasterGrob(plotlist$PDD_Serum_glmnet),
+	rasterGrob(plotlist$PDD_Serum_rf),
+	rasterGrob(plotlist$PDD_Genetic_Epigenetic_cforest),
+	rasterGrob(plotlist$PDD_Genetic_Epigenetic_svmLinear),
+	rasterGrob(plotlist$PDD_Genetic_Epigenetic_glmnet),
+	rasterGrob(plotlist$PDD_Genetic_Epigenetic_rf),ncol=4,nrow=8)
+dev.off()
+
+#grid.arrange(rasterGrob(plot1),rasterGrob(plot2),ncol=1)
+#grid.arrange((plotlist[[1]]))
+
+
+
+#plotlist = list()
+
+
+
+# Make grid
+Gridplot = grid.arrange(unlist(plotlist),ncol = 4,nrow = 8)

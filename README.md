@@ -3,6 +3,8 @@ Machine Learning-based Prediction of Cognitive Outcomes in de novo Parkinson's D
 
 [![GitHub License](https://img.shields.io/github/license/Rrtk2/PPMI-ML-Cognition-PD)](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/blob/master/LICENSE.md) ![](https://img.shields.io/badge/Status-Submitting-green) [![GitHub Watches](https://img.shields.io/github/watchers/Rrtk2/PPMI-ML-Cognition-PD.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/watchers) 
 
+## Check out the preprint!
+At [ResearchSquare](https://doi.org/10.21203/rs.3.rs-1321402/v1) or at [medRxiv](https://doi.org/10.1101/2022.02.02.22270300)
 
 ## Abstract
 **Background:** Cognitive impairment is a debilitating symptom in Parkinson’s disease (PD), with high variability in onset and the course of progression.

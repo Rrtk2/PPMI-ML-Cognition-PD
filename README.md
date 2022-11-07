@@ -1,21 +1,18 @@
-# PPMI-ML-Cognition-PD
-Machine Learning-based Prediction of Cognitive Outcomes in de novo Parkinson's Disease
+# Machine Learning-based Prediction of Cognitive Outcomes in de-novo Parkinson's Disease
 
-[![GitHub License](https://img.shields.io/github/license/Rrtk2/PPMI-ML-Cognition-PD)](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/blob/master/LICENSE.md) ![](https://img.shields.io/badge/Status-Submitting-green) [![GitHub Watches](https://img.shields.io/github/watchers/Rrtk2/PPMI-ML-Cognition-PD.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/watchers) 
+[![](https://img.shields.io/badge/Status-Published-green)](https://www.nature.com/articles/s41531-022-00409-5)
+[![](https://img.shields.io/badge/Repository%20license-MIT-green)](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/blob/master/LICENSE.md) 
+[![GitHub Watches](https://img.shields.io/github/watchers/Rrtk2/PPMI-ML-Cognition-PD.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/watchers) 
 
-## Check out the preprint!
-At [ResearchSquare](https://doi.org/10.21203/rs.3.rs-1321402/v1) or at [medRxiv](https://doi.org/10.1101/2022.02.02.22270300)
+
+## Check out the [published paper](https://www.nature.com/articles/s41531-022-00409-5) at npj parkinson's disease!
+
 
 ## Abstract
-**Background:** Cognitive impairment is a debilitating symptom in Parkinson’s disease (PD), with high variability in onset and the course of progression.
- 
-**Objectives:** To establish an accurate multivariate machine learning (ML) model to predict cognitive outcome in newly diagnosed PD.
+Cognitive impairment is a debilitating symptom in Parkinson’s disease (PD). We aimed to establish an accurate multivariate machine learning (ML) model to predict cognitive outcome in newly diagnosed PD cases from the Parkinson’s Progression Markers Initiative (PPMI). Annual cognitive assessments over an 8-year time span were used to define two cognitive outcomes of (i) cognitive impairment, and (ii) dementia conversion. Selected baseline variables were organized into three subsets of clinical, biofluid and genetic/epigenetic measures and tested using four different ML algorithms. Irrespective of the ML algorithm used, the models consisting of the clinical variables performed best and showed better prediction of cognitive impairment outcome over dementia conversion. We observed a marginal improvement in the prediction performance when clinical, biofluid, and epigenetic/genetic variables were all included in one model. Several cerebrospinal fluid measures and an epigenetic marker showed high predictive weighting in multiple models when included alongside clinical variables.
 
-**Methods:** We used baseline clinical and biological measures from the Parkinson’s Progression Markers Initiative (PPMI) cohort as predictive variables. Annual cognitive assessments over an eight-year time span were used to define two cognitive outcomes of i) dementia conversion, and ii) cognitive impairment. Selected variables were organized into three subsets of clinical, biofluid (CSF and serum) and genetic/epigenetic (blood) measures and tested using four different ML algorithms to predict individual cognitive function in PD.
-
-**Results:** For both cognitive outcomes, irrespective of the ML algorithm used, the models consisting of the clinical subset of variables performed best, with high specificity and the largest area under the curve (AUCs) (0.88 -– 0.92) and Matthews Correlation Coefficient (MCCs) (0.57 –- 0.80). Notably, the cognitive impairment outcome showed better sensitivity than dementia conversion outcome (0.72 – 0.81 vs 0.29 – 0.64, respectively). We observed a marginal improvement in the prediction performance when clinical, biofluid, and epigenetic/genetic variables were all included in one model. Several CSF variables and an epigenetic marker showed high predictive weighting in multiple models only when included alongside clinical variables.
-
-**Conclusion:** Within the generated models, clinical predictors appear to play a more prominent role than biological or genetic predictors. ML algorithms can accurately predict cognitive impairment and dementia in de-novo PD up to eight years before cognitive decline.
+## Hi there!
+Welcome to the github repository containing all the scripts and several documents used in the process of developing and finalizing the work seen in the paper. If you're interested in the used scripts to generate the [LCMM classes](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/tree/main/Scripts/LCMM), processing of the [methylation](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/tree/main/Scripts/Methylation_QC) data and QC, [machine learning](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/tree/main/Scripts/Machine%20learning), handling of the [phenotype](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/tree/main/Scripts/Phenotype) or any of our [figure generation](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/tree/main/Scripts/Plotting) scripts, check out the corresponding links. If there are any questions, don't hesitate to ask!
 
 ## Contact
 Ehsan Pishva ([ehsanpishva](https://github.com/ehsanpishva)) - e.pishva@maastrichtuniversity.nl 
@@ -37,8 +34,11 @@ All authors provided critical feedback on the manuscript and approved the final 
 
 
 ## Status of project
-Submitting.
+Finalized, accepted at [npj parkinson's disease](https://www.nature.com/npjparkd/).
 
+
+## Check out the preprint!
+At [ResearchSquare](https://doi.org/10.21203/rs.3.rs-1321402/v1) or at [medRxiv](https://doi.org/10.1101/2022.02.02.22270300)
 
 ## Licencing and authors
 All code and documents in the PPMI-ML-Cognition-PD folder was created by [these author(s)](/AUTHORS.md).

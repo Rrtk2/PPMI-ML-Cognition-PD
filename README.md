@@ -1,4 +1,4 @@
-# Machine Learning-based Prediction of Cognitive Outcomes in de-novo Parkinson's Disease
+# Machine Learning-based Prediction of Cognitive Outcomes in de novo Parkinson's Disease
 
 [![](https://img.shields.io/badge/Status-Published-green)](https://www.nature.com/articles/s41531-022-00409-5)
 [![](https://img.shields.io/badge/Repository%20license-MIT-green)](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/blob/master/LICENSE.md) 

@@ -15,9 +15,9 @@ Cognitive impairment is a debilitating symptom in Parkinson’s disease (PD). We
 Welcome to the github repository containing all the scripts and several documents used in the process of developing and finalizing the work seen in the paper. If you're interested in the used scripts to process the [methylation](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/tree/main/Scripts/Methylation_QC) data and QC, [machine learning](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/tree/main/Scripts/Machine%20learning), handling of the [phenotype](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/blob/main/Scripts/LCMM/MoCA_LCMM.R) or any of our [figure generation](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/tree/main/Scripts/Plotting) scripts, check out the corresponding links. If there are any questions, don't hesitate to ask!
 
 ## Slides used to present our work
-Maastricht University Data Science Research Seminar Series (17-11-2022) - [info](https://www.maastrichtuniversity.nl/research/um-data-science-research-seminar-series)  - [>Download slides<](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/raw/main/Presentations/Presentation_141122%20UM%20Data%20science%20meeting.pptx)
+Maastricht University Data Science Research Seminar Series (11-2022) - [info](https://www.maastrichtuniversity.nl/research/um-data-science-research-seminar-series)  - [>Download slides<](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/raw/main/Presentations/Presentation_141122%20UM%20Data%20science%20meeting.pptx)
 
-ARE (2022) - [info]()  - [>Download slides<](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/raw/main/Presentations/Josh%20Harvey%20ARE%202022.ppt)
+University of Exeter Medical School ARE event (07-2022) - [>Download slides<](https://github.com/Rrtk2/PPMI-ML-Cognition-PD/raw/main/Presentations/Josh%20Harvey%20ARE%202022.ppt)
 
 ## Contact
 Ehsan Pishva ([ehsanpishva](https://github.com/ehsanpishva)) - e.pishva@maastrichtuniversity.nl 
